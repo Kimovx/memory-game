@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="info-container">
+            <div class="hello">
+                Hello: <span class="name"></span>
+            </div>
+            <div class="tries">
+                Wrong tries: <span class="tries-number"></span>
+            </div>
+        </div>
+        <div class="memory-game-container">
+            <div class="game-block" data-type="ghost">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-ghost"></i></div>
+            </div>
+            <div class="game-block"data-type="ghost">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-ghost"></i></div>
+            </div>
+            <div class="game-block" data-type="gamepad">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-gamepad"></i></div>
+            </div>
+            <div class="game-block"data-type="gamepad">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-gamepad"></i></div>
+            </div>
+            <div class="game-block" data-type="puzzle">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-puzzle-piece"></i></div>
+            </div>
+            <div class="game-block"  data-type="puzzle">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-puzzle-piece"></i></div>
+            </div>
+            <div class="game-block"data-type="chess-board">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-chess-board"></i></div>
+            </div>
+            <div class="game-block"data-type="chess-board">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-chess-board"></i></div>
+            </div>
+            <div class="game-block" data-type="bones">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-skull-crossbones"></i></div>
+            </div>
+            <div class="game-block" data-type="bones">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-skull-crossbones"></i></div>
+            </div>
+            <div class="game-block" data-type="dice">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-dice"></i></div>
+            </div>
+            <div class="game-block" data-type="dice">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-dice"></i></div>
+            </div>
+            <div class="game-block" data-type="diamond">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-diamond"></i></div>
+            </div>
+            <div class="game-block" data-type="diamond">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-diamond"></i></div>
+            </div>
+            <div class="game-block" data-type="dungeon">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-dungeon"></i></div>
+            </div>
+            <div class="game-block" data-type="dungeon">
+                <div class="face front" ></div>
+                <div class="face back"><i class="fa-solid fa-dungeon"></i></div>
+            </div>
+            <div class="game-block"data-type="dice-six">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-dice-six"></i></div>
+            </div>
+            <div class="game-block"data-type="dice-six">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-dice-six"></i></div>
+            </div>
+            <div class="game-block"data-type="dice-d20">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-dice-d20"></i></div>
+            </div>
+            <div class="game-block"data-type="dice-d20">
+                <div class="face front"></div>
+                <div class="face back"><i class="fa-solid fa-dice-d20"></i></div>
+            </div>
+        </div>
+    </div>
+    
+    <audio src="Audio/game-start.wav" preload="auto" id="start"></audio>
+    <audio src="Audio/game-music.wav" loop preload="auto" id="music"></audio>
+    <audio src="Audio/right.wav"  preload="auto" id="right"></audio>
+    <audio src="Audio/wrong.wav" preload="auto" id="wrong"></audio>
+    <audio src="Audio/game-complete.wav" preload="auto" id="complete"></audio>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

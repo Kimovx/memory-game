@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body {
+    font-family: "cairo";
+    position: relative;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1100px;
+    margin: 10px auto 0 auto;
+    justify-content: center;
+    transition: 0.5s opacity;
+
+}
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid blue;
+    padding: 12px;
+    background-color: azure;
+    width: 1080px;
+    margin: auto;
+}
+.hello,
+.tries {
+    font-size: 18px;
+}
+.memory-game-container {
+    display: flex;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+.game-block {
+    position: relative;
+    height: 150px;
+    flex: 1 0 180px;
+    margin: 0 10px 10px;
+    transform-style: preserve-3d;
+    transition: 0.5s transform;
+}
+.back {
+    transform: rotateY(-180deg);
+}
+.front::after {
+    content: "!";
+    color: white;
+    line-height: 150px;
+    font-size: 140px;
+}
+.fa-solid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 102px;
+}
+.face {
+    text-align: center;
+    position: absolute;
+    border: 10px solid blue;
+    backface-visibility: hidden;
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.rotated,
+.match {
+    transform: rotateY(180deg);
+}
+.messege-container {
+    position: absolute;
+    background-color: white;
+    width: 800px;
+    height: 513px;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 182px;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.5s opacity;
+    animation-name: fade-in;    
+    animation-duration: 1.5s; 
+    box-shadow: 0px 0px 35px -14px black;
+
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fade-out {
+    opacity: 0;
+}
+input {
+    width: 100%;
+    margin: 12px 0 24px 0;
+    border-radius: 7px;
+    padding: 7px;
+    border: 1px solid #ff0000cc;
+    font-size: 22px;
+    font-weight: bold;
+}
+input:focus {
+    outline: none;
+    border: 1px solid #ff0000cc;
+}
+.low-opacity {
+    opacity: 0.1;
+}
+.black-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+    transition: 1s;
+}
+button {
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid #ff0000cc;
+    border-radius: 3px;
+    color: #ff0000cc;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+h2 {
+    color: #ff0000cc;
+}
+.wrong-shake {
+    animation-name: shake;
+    animation-duration: 0.4s;
+    
+}
+@keyframes shake {
+    0% {
+        transform: translateX(1%);
+    }
+    10% {
+        transform: translateX(-2%);
+    }
+    20% {
+        transform: translateX(2%);
+        
+    }
+    30% {
+        transform: translateX(-2%);
+        
+    }
+    40% {
+        transform: translateX(2%);
+        
+    }
+    50% {
+        transform: translateX(-2%);
+        
+    }
+    60% {
+        transform: translateX(2%);
+        
+    }
+    70% {
+        transform: translateX(-2%);
+    }
+    80% {
+        transform: translateX(2%);
+    }
+    90% {
+        transform: translateX(-2%);
+    }
+    100% {
+        transform: translateX(1%);
+    }
+}
+.no-click {
+    pointer-events: none;
+}
